@@ -1,17 +1,17 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <!-- 显示当前路由地址显示的内容 -->
     <router-view/>
   </div>
 </template>
 
- <script>
+<script>
 export default {
   name: "App"
 };
 </script>
 
- <style>
+<style>
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
