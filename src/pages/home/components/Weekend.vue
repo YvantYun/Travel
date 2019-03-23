@@ -3,7 +3,7 @@
         <div class="title">周末去哪儿</div>
         <ul>
             <li class="item border-bottom" 
-                v-for="item of recommendList" 
+                v-for="item of list" 
                 :key="item.id">
                 <div class="item-img-wrapper">
                     <img class="item-img" :src="item.imgUrl">   
@@ -19,39 +19,21 @@
 <script>
 export default {
     name: 'HomeWeekend',
-    data () {
-        return {
-            recommendList: [{
-                id: '001',
-                imgUrl: 'http://img1.qunarzz.com/sight/source/1812/b4/e9d7f043c4fadf.jpg_r_640x214_713df0cf.jpg',
-                title: '北京鸟巢',
-                desc: '浪漫大连旅游，烂漫的鸟巢体验',
-            },{
-                id: '002',
-                imgUrl: 'http://img1.qunarzz.com/sight/source/1812/b4/e9d7f043c4fadf.jpg_r_640x214_713df0cf.jpg',
-                title: '北京鸟巢',
-                desc: '浪漫大连旅游，烂漫的鸟巢体验',
-            },{
-                id: '003',
-                imgUrl: 'http://img1.qunarzz.com/sight/source/1812/b4/e9d7f043c4fadf.jpg_r_640x214_713df0cf.jpg',
-                title: '北京鸟巢',
-                desc: '浪漫大连旅游，烂漫的鸟巢体验',
-            }]
-        }
+    props: {
+        list: Array
     }
 }
 </script>
 <style lang="stylus" scoped>
     @import '~styles/mixins.styl';
     .title
-        margin-top: .2rem
         line-height: .8rem
         background: #ccc
         text-indent: .2rem
     .item-img-wrapper
         overflow: hidden
         height: 0
-        padding-bottom: 33.9%
+        padding-bottom: 37.09%
         .item-img
             width: 100%
     .item-info

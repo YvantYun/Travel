@@ -2,7 +2,7 @@
     <div>
         <div class="title">热销推荐</div>
         <ul>
-            <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+            <li class="item border-bottom" v-for="item of list" :key="item.id">
                 <img class="item-img" :src="item.imgUrl">
                 <div class="item-info">
                     <p class="item-title">{{item.title}}</p>
@@ -16,25 +16,8 @@
 <script>
 export default {
     name: 'HomeRecommend',
-    data () {
-        return {
-            recommendList: [{
-                id: '001',
-                imgUrl: 'http://img1.qunarzz.com/sight/p0/1508/fe/434ee530e21f1c11bad088e8cc8d5e93.water.jpg_200x200_912ce9f4.jpg',
-                title: '北京鸟巢',
-                desc: '浪漫大连旅游，烂漫的鸟巢体验',
-            },{
-                id: '002',
-                imgUrl: 'http://img1.qunarzz.com/sight/p0/1508/fe/434ee530e21f1c11bad088e8cc8d5e93.water.jpg_200x200_912ce9f4.jpg',
-                title: '北京鸟巢',
-                desc: '浪漫大连旅游，烂漫的鸟巢体验',
-            },{
-                id: '003',
-                imgUrl: 'http://img1.qunarzz.com/sight/p0/1508/fe/434ee530e21f1c11bad088e8cc8d5e93.water.jpg_200x200_912ce9f4.jpg',
-                title: '北京鸟巢',
-                desc: '浪漫大连旅游，烂漫的鸟巢体验',
-            }]
-        }
+    props: {
+        list: Array
     }
 }
 </script>
